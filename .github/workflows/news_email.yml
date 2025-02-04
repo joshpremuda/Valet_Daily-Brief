@@ -1,0 +1,26 @@
+name: Daily News Email
+
+on:
+  schedule:
+    - cron: "0 8 * * *"  # Runs every day at 8 AM UTC
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: pip install feedparser
+
+      - name: Run script
+        env:
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        run: python news_script.py
