@@ -22,12 +22,12 @@ def fetch_news():
 
 # Send Email
 def send_email(news_summary):
-    sender_email = "your-email@gmail.com"  # Replace with your email
-    receiver_email = "your-email@gmail.com"  # Replace with your email
+    sender_email = "HI@SMALLEYCOFFEE.com"  # Replace with your email
+    receiver_email = "JOSHPREMUDA@gmail.com"  # Replace with your email
     password = "your-app-password"  # Use an App Password (see below)
 
     msg = MIMEText(news_summary)
-    msg["Subject"] = "Daily News Summary"
+    msg["Subject"] = "Daily News BRIEFING"
     msg["From"] = sender_email
     msg["To"] = receiver_email
 
