@@ -22,7 +22,7 @@ def fetch_news():
 
 # Send Email
 def send_email(news_summary):
-    sender_email = "HI@SMALLEYCOFFEE.com"  # Replace with your email
+    sender_email = "joshpremuda@gmail.com"  # Replace with your email
     receiver_email = "JOSHPREMUDA@gmail.com"  # Replace with your email
     password = "your-app-password"  # Use an App Password (see below)
 
